@@ -1,0 +1,33 @@
+<!--index.wxml-->
+
+<swiper autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}">
+  <swiper-item wx:for='{{swiperList}}' wx:key='{{index}}'>
+    <image src="{{item}}"></image>
+  </swiper-item>
+</swiper>
+<view class="home">
+  <view class="home_title">
+    <text class="home_title_left">我的题库</text>
+    <text class="home_title_right" bindtap="tolanguage">全部题库></text>
+  </view>
+  <view class="home_main">
+    <view wx:for="{{itemList}}"
+          wx:key="{{index}}" 
+          class="home_main_item"
+          hover-class="onclick" 
+          bindtap="toMenu"
+          data-index="{{index}}">
+      <image class="home_main_item_pictur" src="{{item['image1']}}"></image>
+      <view class="home_main_item_inner">
+        <view class="home_main_item_inner_top">
+          <text class="home_main_item_inner_top_name">{{item['name']}}</text>
+          <text class="home_main_item_inner_top_abstract">{{item['abstract']}}</text>
+        </view>
+        <view class="home_main_item_inner_bottom">
+          <text class="home_main_item_inner_top_label">{{item['label']}}</text>
+        </view>
+      </view>
+      <image class="home_main_item_icon" src="{{item['image2']}}"></image>
+    </view>
+  </view>
+</view>

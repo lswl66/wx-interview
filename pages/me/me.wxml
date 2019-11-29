@@ -1,0 +1,48 @@
+<!--pages/me/me.wxml-->
+<!-- <text>pages/me/me.wxml</text> -->
+ <!-- src="{{/image/touxiang.jpg}}" -->
+<view class="user">
+  <view class="user_info" wx:if="{{islogin == 1}}">
+    <image src="{{userInfo.avatarUrl}}"></image>
+    <view class="user_name">{{userInfo.nickName}}</view>
+     <view class="user_about">
+      <text>VIP1</text>
+      <text>前端</text>
+    </view>
+  </view>
+  <view class="user_info" wx:else>
+    <image src="/image/touxiang.jpg"></image>
+    <view class="user_name" hover-class="onclick" bindtap='toLogin'>微信登录</view>
+  </view>
+  <view class="user_record">
+    <view class="user_record_item" hover-class="onclick">
+      <image src="/image/note.png" style="width:18px;height:18px"></image>
+      <view bindtap="toRecord">您答的题</view>
+    </view>
+    <view class="user_record_item" hover-class="onclick">
+      <image src="/image/pen.png" style="width:18px;height:18px;"></image>
+      <view bindtap="toMyQuestion">您出的题</view>
+    </view>
+  </view>
+
+  <view class="user_record">
+    <view class="user_record_item" hover-class="onclick" bindtap="tolanguage">
+      <image src="/image/js.png" style="width:18px;height:18px"></image>
+      <view>编程语言</view>
+    </view>
+    <button open-type="contact" class="contactus" hover-class="onclick">
+      <view class="user_record_item">
+        <image src="/image/kefu.png" style="width:18px;height:18px;"></image>
+        <view>联系我们</view>
+      </view>
+    </button>
+  </view>
+
+  <view class="user_record">
+    <view class="user_record_item" hover-class="onclick">
+      <image src="/image/about.png" style="width:20px;height:20px"></image>
+      <view bindtap="toAboutWe">关于我们</view>
+    </view>
+  </view>
+
+</view>

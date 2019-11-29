@@ -1,0 +1,45 @@
+<!--pages/question/question.wxml-->
+<view class="home">
+  <swiper>
+    <swiper-item
+      wx:for="{{questionList}}"
+      wx:key="{{index}}">
+      <view class="question-inner">
+        <view class="question-name">【单选题】{{item.name}}</view>
+        <view 
+          class="question-answers">
+          <view 
+            class="question-answers-item"
+            wx:for="{{item.answers}}"
+            wx:key="{{index}}"
+            wx:for-item="answersitem"
+            wx:for-index="answersindex"
+            bindtap="toanswer"
+            data-myanswer="{{answersitem.id}}"
+            data-target="{{index}}"
+            hover-class="onclick">
+            <view class="{{item.myanswer&&item.answer==answersitem.id?'rightanswer':''}} {{item.answer!=item.myanswer&&item.myanswer==answersitem.id?'wronganswer':''}} question-answers-item-title">
+               {{answersTitle[answersindex]}}
+            </view>
+           {{answersitem.name}}
+          </view>
+        </view>
+      </view>
+      <view 
+        class="question-details"
+        wx:if="{{item.show == 1}}">
+        <view class="question-details-title">面试题详解：</view>
+          {{item.details}}
+      </view>
+      <view class="quertion-footer">{{index+1}} / {{num}}</view>
+    </swiper-item>
+    <swiper-item
+      wx:if="{{questionList.length==0}}">
+      <view class="question-inner">
+        <view class="question-text">什么？该题库下还没有题目？</view>
+      </view>
+      <button type="primary" class="question-add">我来出个题目</button>
+      <view class="quertion-footer">1 / 1</view>
+    </swiper-item>
+  </swiper>
+</view>

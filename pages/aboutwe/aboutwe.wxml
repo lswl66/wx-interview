@@ -1,0 +1,20 @@
+<!--pages/aboutwe/aboutwe.wxml-->
+
+<view class="home">
+  <image src="/image/128x128-icon.png"/>
+  <mp-msg title="一个面试题">
+    <view slot="desc">
+      Version 2.0.1
+    </view>
+    <view slot="extend" class="abstract">
+      <view>一个面试题</view>
+      <view>不只是一个面试题</view>
+      <view>是 随时随地可以学习基础知识</view>
+      <view>是 随时随地可以准备一个面试</view>
+    </view>
+    <view slot="footer" class="footer">
+      <view class="weui-footer__text">Copyright © 2022 lswl66</view>
+    </view>
+  </mp-msg>
+</view>
+ 

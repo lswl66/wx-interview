@@ -1,0 +1,52 @@
+<!--pages/menu/menu.wxml-->
+<!-- <text>pages/menu/menu.wxml</text> -->
+<view class="menu_main">
+  <view class="menu_title">菜单</view>
+  <view class="menu_inner">
+    <view class="menu_item" bindtap="tolodding">
+      <image src="/image/num.png"></image>
+      <view class="menu_item_name">总题数</view>
+      <view class="menu_item_summary">共50题</view>
+    </view>
+    <view class="menu_item" bindtap="toquestion">
+      <image src="/image/note1.png"></image>
+      <view class="menu_item_name">继续刷题</view>
+      <view class="menu_item_summary">共50题</view>
+    </view>
+    <view class="menu_item" bindtap="tolodding">
+      <image src="/image/wrong.png"></image>
+      <view class="menu_item_name">回顾错题</view>
+      <view class="menu_item_summary">共0题</view>
+    </view>
+    <view class="menu_item" bindtap="tolodding">
+      <image src="/image/star.png"></image>
+      <view class="menu_item_name">{{name}}介绍</view>
+      <view class="menu_item_summary"></view>
+    </view>
+    <view class="menu_item" bindtap="tolodding">
+      <image src="{{image}}"></image>
+      <view class="menu_item_name">{{name}}</view>
+      <view class="menu_item_summary"></view>
+    </view>
+    <view class="menu_item" bindtap="tolodding">
+      <image src="/image/test.png"></image>
+      <view class="menu_item_name">参加考试</view>
+      <view class="menu_item_summary"></view>
+    </view>
+    <view class="menu_item" bindtap="tolodding">
+      <image src="/image/jewel.png"></image>
+      <view class="menu_item_name">顶级公司</view>
+      <view class="menu_item_summary">面经</view>
+    </view>
+    <view class="menu_item" bindtap="tolodding">
+      <image src='/image/salary.png'></image>
+      <view class="menu_item_name">比比工资</view>
+      <view class="menu_item_summary">万元</view>
+    </view>
+    <view class="menu_item" bindtap="tolodding">
+      <image src="/image/doctor.png"></image>
+      <view class="menu_item_name">校招offer</view>
+      <view class="menu_item_summary">看看</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,7 @@
+/* pages/lodding/lodding.wxss */
+text{
+  position: absolute;
+  top: 100px;
+  left: calc(50vw - 69.8px);
+  color: #999;
+}

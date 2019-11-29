@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "mp-dialog": "/weui/dialog/dialog"
+  },
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#fafafa",
+  "navigationBarTitleText": "您答的题",
+  "navigationBarTextStyle": "black"
+}

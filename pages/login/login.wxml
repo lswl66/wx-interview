@@ -1,0 +1,24 @@
+<!--pages/login/login.wxml-->
+
+<view class="login">
+  <view class="login-head">
+    <image src="/image/128x128-icon.png"/>
+    <view>一个面试题，不只是一个面试题</view>
+  </view>
+  <view class="login-body">
+    <view class="login-item">
+      <view class="login-item-title">服务:</view>
+      <view class="login-item-text">随时、随地来学习专业技术知识</view>
+    </view>
+    <view class="login-item">
+      <view class="login-item-title">服务:</view>
+      <view class="login-item-text">坐公交、地铁暇余，不妨来学习</view>
+    </view>
+  </view>
+  <button 
+    open-type="getUserInfo" 
+    bindgetuserinfo="onGetUserInfo"
+    class="login-btn">
+    微信登录
+  </button>
+</view>

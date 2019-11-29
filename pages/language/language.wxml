@@ -1,0 +1,51 @@
+<!--pages/language/language.wxml-->
+
+<view class="home">
+  <view class="home_main">
+    <view class="home_main_title">我关注的面试题库（点击 取消关注题库）</view>
+    <view 
+      wx:for="{{myLanguage}}"
+      wx:key="{{index}}" 
+      class="home_main_item" 
+      bindtap="todelete"
+      data-index="{{index}}">
+      <image class="home_main_item_pictur" src="{{item['image1']}}"></image>
+      <view class="home_main_item_inner">
+        <view class="home_main_item_inner_top">
+          <text class="home_main_item_inner_top_name">{{item['name']}}</text>
+          <text class="home_main_item_inner_top_abstract">{{item['abstract']}}</text>
+        </view>
+        <view class="home_main_item_inner_bottom">
+          <text class="home_main_item_inner_top_label">{{item['label']}}</text>
+        </view>
+      </view>
+      <image class="home_main_item_icon" src="{{item['image2']}}"></image>
+    </view>
+  </view>
+  <view class="home_main">
+    <view class="home_main_title">推荐的面试题库（点击 关注题库）</view>
+    <view 
+      wx:for="{{otherLanguage}}"
+      wx:key="{{index}}" 
+      class="home_main_item" 
+      bindtap="toadd"
+      data-index="{{index}}">
+      <image class="home_main_item_pictur" src="{{item['image1']}}"></image>
+      <view class="home_main_item_inner">
+        <view class="home_main_item_inner_top">
+          <text class="home_main_item_inner_top_name">{{item['name']}}</text>
+          <text class="home_main_item_inner_top_abstract">{{item['abstract']}}</text>
+        </view>
+        <view class="home_main_item_inner_bottom">
+          <text class="home_main_item_inner_top_label">{{item['label']}}</text>
+        </view>
+      </view>
+      <image class="home_main_item_icon" src="{{item['image2']}}"></image>
+    </view>
+    <view 
+      class="home-main-item" 
+      wx:if="{{otherLanguage.length == 0}}">
+      您已关注所有面试题库，暂时没有其他题库
+    </view>
+  </view>
+</view>

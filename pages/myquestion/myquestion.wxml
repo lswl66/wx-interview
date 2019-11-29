@@ -1,0 +1,52 @@
+<!--pages/record/record.wxml-->
+<!-- <text>pages/record/record.wxml</text> -->
+<view class="main">
+  <view class="select_date">
+    <view class="title">筛选时间</view>
+    <view class="section">
+      <picker mode="date" value="{{date}}" start="2019-01" end="2022-01" bindchange="bindDateChange" fields="month">
+        <view class="picker">
+          当前选择: {{date}}
+        </view>
+      </picker>
+    </view>
+  </view>
+  <view class="all_record">
+    <view class="title">{{date}}</view>
+    <view class="{{recordList.length == 0 ? 'not_have' :'hide'}}">
+      当前时间没有记录
+    </view>
+    <view class="{{recordList.length == 0 ? 'hide' :'record_inner'}}">
+      <view class="record_item" 
+            wx:for="{{recordList}}" 
+            wx:key="{{index}}"
+            hover-class="onclick"
+            bindtap="toshow"
+            data-index="{{index}}">
+        <view class="record_item_text">
+          {{item.name}}
+        </view>
+        <image src="{{icon}}"></image>
+      </view>
+      <mp-dialog 
+        show="{{dialogShow}}" 
+        bindbuttontap="tapDialogButton" 
+        buttons="{{buttons}}"
+        mask-closable="{{false}}"
+        title="回顾答题">
+        <view>
+          {{currentQuestion.name}}
+          <view 
+          class="answers"
+          wx:for="{{currentQuestion.answers}}"
+          wx:key="{{index}}">
+            <view 
+              class="{{item.id == currentQuestion.right_answer ? 'rightanswer' : 'answers-title'}} {{item.id == currentQuestion.my_answer && iswrong == 1 ? 'wronganswer' : 'answers-title'}}"> 
+              {{answersTitle[index]}}</view>
+            <view class="answers-inner">{{item.name}}</view>
+          </view>
+        </view>
+      </mp-dialog>
+    </view>
+  </view>
+</view>

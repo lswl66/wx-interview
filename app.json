@@ -1,0 +1,39 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/question/question",
+    "pages/aboutwe/aboutwe",
+    "pages/language/language",
+    "pages/me/me",
+    "pages/login/login",
+    "pages/record/record",
+    "pages/menu/menu",
+    "pages/logs/logs",
+    "pages/myquestion/myquestion",
+    "pages/lodding/lodding"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FA5957",
+    "navigationBarTitleText": "首页",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "selectedColor": "#1afa29",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/image/home.png",
+        "selectedIconPath": "/image/home1.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "/image/head.png",
+        "selectedIconPath": "/image/head1.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}
